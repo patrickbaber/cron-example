@@ -10,6 +10,9 @@ RUN apk add --no-cache bash && \
     mv regfish.com_dynDNSv2_wget/regfish_* /usr/local/bin && \
     rm -rf /usr/src
 
+# Copy custom script
+COPY regfish_ipcheck2.sh /usr/local/bin
+
 # Configure cron
 COPY crontab /etc/cron/crontab
 
